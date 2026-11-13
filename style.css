@@ -1,0 +1,193 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+/* Moldura principal igual ao modelo */
+.pagina-geral {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #eaf0f6;
+  border: 2px solid #263244;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 1. Cabeçalho */
+.topo {
+  background-color: #263244;
+  padding: 18px 20px;
+}
+
+.topo-conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* 2. Banner Principal */
+.banner-principal {
+  background-color: #bedce6;
+  padding: 35px 20px;
+  text-align: center;
+  color: #222222;
+}
+
+.banner-principal h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.banner-principal p {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.banner-acoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-acoes img {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #263244;
+}
+
+.btn-explorar {
+  background-color: #263244;
+  color: #ffffff;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 3. Grade dos 6 Cards (3 LADO A LADO) */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais lado a lado */
+  gap: 12px;
+}
+
+.top-banner {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tamanho fixo das imagens para não entortar os cards */
+.hero-img-box {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.hero-img-box img {
+  width: 100%;
+  height: 150px; /* Todas as imagens ficam com a mesma altura */
+  object-fit: cover; /* Ajusta a imagem sem esticar */
+  display: block;
+  border-radius: 4px;
+}
+
+.hero-text-box h2 {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 4px;
+}
+
+.hero-text-box h3 {
+  font-size: 15px;
+  color: #222222;
+}
+
+/* 4. Programação e Sobre (2 colunas lado a lado) */
+.info-inferior {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.caixa-info {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.caixa-info h2 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.caixa-info p {
+  font-size: 13px;
+  color: #444444;
+}
+
+/* 5. Rodapé */
+.rodape {
+  background-color: #263244;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+}
+
+/* Ajuste para Telemóvel */
+@media (max-width: 768px) {
+  .topo-conteudo, .banner-acoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grade-cards, .info-inferior {
+    grid-template-columns: 1fr;
+  }
+}
